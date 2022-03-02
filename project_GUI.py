@@ -9,19 +9,19 @@ root = Tk()
 root.geometry("750x400")
 root.title("Employee Management")
 
-# con = sqlite3.connect("Management.db")
-# c = con.cursor()
-# c.execute("""CREATE TABLE employees (
-#         first_name text,
-#         last_name text,
-#         cnic integer,
-#         age integer,
-#         salary integer,
-#         post text
-#
-# )""")
-# con.commit()
-# con.close()
+con = sqlite3.connect("Management.db")
+c = con.cursor()
+c.execute("""CREATE TABLE employees (
+        first_name text,
+        last_name text,
+        cnic integer,
+        age integer,
+        salary integer,
+        post text
+
+)""")
+con.commit()
+con.close()
 
 frame_admin = LabelFrame(root, text="Admin login", font=("Arial", 28), padx=10, pady=10, border=1, relief="sunken")
 frame_admin.pack(padx=10, pady=10)
